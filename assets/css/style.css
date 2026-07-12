@@ -1,0 +1,3028 @@
+/*==================================================
+                GOOGLE FONTS
+==================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+/*==================================================
+                CSS RESET
+==================================================*/
+
+/*
+  Removes default browser spacing
+  and applies consistent styling.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+
+  outline: none;
+  border: none;
+
+  text-transform: capitalize;
+
+  transition: all 0.25s ease;
+}
+
+/* Text Selection */
+
+*::selection {
+  background: #2b3dda;
+  color: #ffffff;
+}
+
+/*==================================================
+                HTML
+==================================================*/
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/*==================================================
+                BODY
+==================================================*/
+
+body {
+  background: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/*==================================================
+                CUSTOM SCROLLBAR
+==================================================*/
+
+/* Width */
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* Track */
+
+html::-webkit-scrollbar-track {
+  background: rgb(235, 202, 245);
+}
+
+/* Thumb */
+
+html::-webkit-scrollbar-thumb {
+  background: #420177;
+  border-radius: 50px;
+}
+
+/* Hover Effect */
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #5d02aa;
+}
+
+/*==================================================
+                COMMON SECTION STYLING
+==================================================*/
+
+/*
+  Every section will automatically
+  have equal padding and full viewport height.
+*/
+
+section {
+  min-height: 100vh;
+  padding: 8rem 9% 4rem;
+}
+
+/*==================================================
+                COMMON HEADING
+==================================================*/
+
+.heading {
+  text-align: center;
+
+  font-size: 3.5rem;
+  font-weight: 800;
+
+  color: rgb(32, 32, 32);
+
+  margin-bottom: 4rem;
+}
+
+.heading span {
+  color: rgb(115, 3, 167);
+}
+
+/*==================================================
+                PRELOADER
+==================================================*/
+
+/*
+  Displays loading animation
+  before website loads completely.
+*/
+
+.loader-container {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #e6eff1;
+
+  z-index: 10000;
+}
+
+/*
+  Hide loader after page load
+*/
+
+.loader-container.fade-out {
+  top: -120%;
+}
+
+/*==================================================
+                COMMON RESPONSIVE SETTINGS
+==================================================*/
+
+/* Large Laptop */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+
+  section {
+    padding: 8rem 6%;
+  }
+}
+
+/* Laptop */
+
+@media (max-width: 992px) {
+  html {
+    font-size: 58%;
+  }
+
+  section {
+    padding: 8rem 5%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 56%;
+  }
+
+  section {
+    padding: 7rem 4%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 7rem 2rem;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 360px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*==================================================
+                    HEADER / NAVBAR
+==================================================*/
+
+/*
+  Fixed navigation bar that remains
+  visible while scrolling.
+*/
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 6.5rem;
+  padding: 1.7rem 10%;
+
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+}
+
+/*==================================================
+                    LOGO
+==================================================*/
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 1.9rem;
+  font-weight: 800;
+
+  color: #0e2431;
+}
+
+header .logo i {
+  font-size: 2.2rem;
+}
+
+header .logo:hover {
+  color: #fc8c05;
+}
+
+/*==================================================
+                DESKTOP NAVIGATION
+==================================================*/
+
+header .navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header .navbar ul li {
+  margin: 0;
+}
+
+header .navbar ul li a {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 1.57rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+
+  color: #0e2431;
+
+  transition: all 0.3s ease;
+}
+
+/* Active & Hover Link */
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: #011aff;
+}
+
+/* Animated Underline */
+
+header .navbar ul li a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+
+  width: 0%;
+  height: 0.25rem;
+
+  background: #011aff;
+
+  transition: width 0.3s ease;
+}
+
+header .navbar ul li a:hover::after,
+header .navbar ul li a.active::after {
+  width: 100%;
+}
+
+/*==================================================
+                HAMBURGER MENU
+==================================================*/
+
+#menu {
+  display: none;
+
+  font-size: 3rem;
+
+  color: rgb(24, 2, 63);
+
+  cursor: pointer;
+}
+
+/* Rotate menu icon when opened */
+
+.fa-times {
+  transform: rotate(180deg);
+}
+
+/*==================================================
+                TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width: 992px) {
+  header {
+    padding: 1.7rem 6%;
+  }
+}
+
+/*==================================================
+                MOBILE NAVBAR
+==================================================*/
+
+@media (max-width: 768px) {
+  /* Header */
+
+  header {
+    padding: 1.5rem 5%;
+  }
+
+  /* Hamburger Icon */
+
+  #menu {
+    display: block;
+  }
+
+  /* Sidebar Menu */
+
+  header .navbar {
+    position: fixed;
+
+    top: 6.5rem;
+    right: -120%;
+
+    width: 75%;
+    height: calc(100vh - 6.5rem);
+
+    background: #0e0f31;
+
+    transition: right 0.35s ease;
+
+    overflow-y: auto;
+  }
+
+  /* Show Sidebar */
+
+  header .navbar.nav-toggle {
+    right: 0;
+  }
+
+  /* Navigation List */
+
+  header .navbar ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding: 2rem;
+  }
+
+  /* Navigation Item */
+
+  header .navbar ul li {
+    width: 100%;
+  }
+
+  /* Navigation Link */
+
+  header .navbar ul li a {
+    display: block;
+
+    width: 100%;
+
+    padding: 1.3rem 2rem;
+
+    font-size: 2rem;
+
+    color: #ffffff;
+
+    border-radius: 0.5rem;
+  }
+
+  /* Hover Effect */
+
+  header .navbar ul li a:hover,
+  header .navbar ul li a.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+
+  /* Disable underline in mobile */
+
+  header .navbar ul li a::after {
+    display: none;
+  }
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media (max-width: 480px) {
+  header {
+    height: 6rem;
+  }
+
+  header .logo {
+    font-size: 1.8rem;
+  }
+
+  header .logo i {
+    font-size: 2rem;
+  }
+
+  header .navbar {
+    width: 100%;
+    top: 6rem;
+    height: calc(100vh - 6rem);
+  }
+}
+
+/*==================================================
+                    HERO SECTION
+==================================================*/
+
+/*
+    Main landing section of the portfolio.
+    Uses Flexbox for proper alignment across
+    desktop, tablet and mobile devices.
+*/
+
+.home {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 4rem;
+
+  min-height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 12rem;
+}
+
+/*==================================================
+                PARTICLES BACKGROUND
+==================================================*/
+
+/*
+    Full-screen particle background.
+*/
+
+.home #particles-js {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+/* Optional Overlay */
+
+.home::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+/*==================================================
+                HERO CONTENT
+==================================================*/
+
+.home .content {
+  position: relative;
+  z-index: 2;
+
+  flex: 1 1 45rem;
+}
+
+.home .content h2 {
+  font-size: clamp(4rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.3;
+
+  color: #002057;
+}
+
+.home .content h2 span {
+  color: #ff7b00;
+}
+
+.home .content p {
+  margin: 2rem 0;
+
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 600;
+
+  color: #000;
+}
+
+.home .content p span {
+  color: rgb(148, 8, 8);
+}
+
+/*==================================================
+                HERO BUTTON
+==================================================*/
+
+/*
+    Primary Call-To-Action Button
+*/
+
+.home .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  margin-top: 2rem;
+  padding: 1.6rem 3.2rem;
+
+  border-radius: 50px;
+
+  background: #2506ad;
+  color: #ffffff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  box-shadow: 0 8px 22px rgba(48, 68, 247, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.home .btn span {
+  letter-spacing: 0.08rem;
+}
+
+.home .btn i {
+  font-size: 1.6rem;
+  transition: transform 0.35s ease;
+}
+
+.home .btn:hover {
+  background: #1a047e;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(48, 68, 247, 0.45);
+}
+
+.home .btn:hover i {
+  transform: translateX(6px);
+}
+
+/*==================================================
+                HERO IMAGE
+==================================================*/
+
+.home .image {
+  position: relative;
+  z-index: 2;
+
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .image img {
+  width: min(100%, 380px);
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.4s ease;
+}
+
+.home .image img:hover {
+  transform: scale(1.03);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/*==================================================
+                LARGE DEVICES
+==================================================*/
+
+@media (max-width: 1200px) {
+  .home {
+    gap: 3rem;
+  }
+
+  .home .image img {
+    max-width: 340px;
+    margin: auto;
+  }
+}
+
+/*==================================================
+                TABLET
+==================================================*/
+
+@media (max-width: 992px) {
+  .home {
+    gap: 2.5rem;
+  }
+
+  .home .content {
+    flex: 1 1 40rem;
+  }
+
+  .home .image {
+    flex: 1 1 35rem;
+    margin: auto;
+  }
+}
+
+/*==================================================
+                MOBILE LAYOUT
+==================================================*/
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 0.1rem;
+  }
+
+  .home .content {
+    width: 100%;
+  }
+
+  .home .image {
+    width: 100%;
+    margin: auto;
+  }
+
+  .home .image img {
+    width: min(80%, 300px);
+  }
+
+  .home .btn {
+    margin-inline: auto;
+  }
+}
+
+/*=========================================================
+                    SOCIAL ICONS
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    Social Media Icons Container
+-----------------------------------------------------------
+*/
+
+.socials {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 5rem;
+}
+
+.socials .social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1.2rem;
+}
+
+/*=========================================================
+                    SOCIAL ICONS
+=========================================================*/
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4.6rem;
+  height: 4.6rem;
+
+  border-radius: 50%;
+
+  font-size: 2rem;
+
+  background: #09011b;
+  color: #00d9ff;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                COMMON HOVER EFFECT
+=========================================================*/
+
+.social-icons a:hover {
+  color: #ffffff;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/*=========================================================
+                INDIVIDUAL BRAND COLORS
+=========================================================*/
+
+.social-icons a.github:hover {
+  background: #0e0e0e;
+}
+
+.social-icons a.linkedin:hover {
+  background: #0077b5;
+}
+
+.social-icons a.twitter:hover {
+  background: #1da1f2;
+}
+
+.social-icons a.instagram:hover {
+  background: #e1306c;
+}
+
+.social-icons a.dev:hover {
+  background: #080808;
+}
+
+/*=========================================================
+                HERO RESPONSIVE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .socials {
+    margin-top: 3rem;
+  }
+
+  .socials .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-icons a {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding-top: 9rem;
+    min-height: auto;
+  }
+
+  .home .content h2 {
+    line-height: 1.4;
+  }
+
+  .home .content p {
+    margin: 1.5rem 0;
+  }
+
+  .socials {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .home .image img {
+    width: min(90%, 240px);
+  }
+
+  .home .btn {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    width: 4rem;
+    height: 4rem;
+
+    font-size: 1.7rem;
+  }
+}
+
+/*=========================================================
+                HERO SECTION END
+=========================================================*/
+
+/*=========================================================
+                      ABOUT SECTION
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    About Section Wrapper
+-----------------------------------------------------------
+*/
+
+.about {
+  background: #ffffffa8;
+}
+
+/*=========================================================
+                    ABOUT ROW LAYOUT
+=========================================================*/
+
+/*
+    Uses Flexbox to align image and content side-by-side.
+    Automatically wraps on smaller devices.
+*/
+
+.about .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 4rem;
+
+  padding: 4rem 2rem;
+}
+
+/*=========================================================
+                    PROFILE IMAGE
+=========================================================*/
+
+.about .row .image {
+  text-align: center;
+  flex: 1 1 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .row .image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  mix-blend-mode: luminosity;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.35s ease;
+}
+
+/* Show original image color on hover */
+
+.about .row .image img:hover {
+  mix-blend-mode: normal;
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+/*=========================================================
+                    ABOUT CONTENT
+=========================================================*/
+
+.about .row .content {
+  flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+  font-size: clamp(2.8rem, 4vw, 3.5rem);
+  font-weight: 700;
+
+  color: #1b1b1b;
+}
+
+.about .row .content .tag {
+  margin: 1rem 0 2rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: #020133;
+}
+
+.about .row .content p {
+  margin-bottom: 1.6rem;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 1.6rem;
+  line-height: 1.8;
+
+  color: #333;
+
+  text-transform: none;
+}
+
+/*=========================================================
+                PERSONAL INFORMATION
+=========================================================*/
+
+.about .row .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about .row .content .box-container .box {
+  flex: 1 1 22rem;
+}
+
+.about .row .content .box-container .box p {
+  margin-bottom: 1rem;
+
+  font-weight: 600;
+}
+
+.about .row .content .box-container .box p span {
+  color: #011aff;
+}
+
+/*=========================================================
+                    RESUME BUTTON
+=========================================================*/
+
+.resumebtn {
+  margin-top: 4rem;
+}
+
+.resumebtn .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  padding: 1.5rem 3rem;
+
+  border-radius: 10px;
+
+  background: #2506ad;
+  color: #ffffff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  box-shadow: 0 8px 22px rgba(48, 68, 247, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.resumebtn .btn span {
+  letter-spacing: 0.08rem;
+}
+
+.resumebtn .btn i {
+  font-size: 1.5rem;
+
+  transition: transform 0.35s ease;
+}
+
+.resumebtn .btn:hover {
+  background: #1a047e;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(48, 68, 247, 0.45);
+}
+
+.resumebtn .btn:hover i {
+  transform: translateX(6px);
+}
+
+/*=========================================================
+                TABLET RESPONSIVE
+=========================================================*/
+
+@media (max-width: 992px) {
+  .about .row {
+    gap: 3rem;
+  }
+
+  .about .row .image img {
+    max-width: 280px;
+  }
+}
+
+/*=========================================================
+                MOBILE RESPONSIVE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 2rem 1rem;
+  }
+
+  .about .row .content {
+    width: 100%;
+  }
+
+  .about .row .content .box-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .resumebtn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 480px) {
+  .about .row .image img {
+    max-width: 240px;
+  }
+
+  .about .row .content h3 {
+    font-size: 2.6rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.5rem;
+  }
+}
+
+/*=========================================================
+                      SKILLS SECTION
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    Section Wrapper
+-----------------------------------------------------------
+*/
+
+.skills {
+  min-height: 100vh;
+  padding: 6rem 8%;
+
+  background: linear-gradient(to bottom, #ffffffa8, #4a00e0);
+}
+
+.skills h2 {
+  color: #090000;
+}
+
+.skills .heading span {
+  color: rgb(255, 230, 0);
+}
+
+/*=========================================================
+                    SKILLS CONTAINER
+=========================================================*/
+
+.skills .container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 3rem auto 0;
+  padding: 2.5rem;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 22, 0.45);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/*=========================================================
+                    GRID LAYOUT
+=========================================================*/
+
+/*
+    Automatically adjusts the number
+    of skill cards based on screen size.
+*/
+
+.skills .container .row {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+  gap: 1.8rem;
+}
+
+/*=========================================================
+                    SKILL CARD
+=========================================================*/
+
+.skills .container .bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.6rem 1rem;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  background: rgba(0, 0, 22, 0.9);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Animation */
+
+.skills .container .bar:hover {
+  transform: translateY(-8px) scale(1.04);
+
+  background: rgba(0, 0, 0, 0.95);
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+/*=========================================================
+                    CARD CONTENT
+=========================================================*/
+
+.skills .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.2rem;
+
+  text-align: center;
+}
+
+/*=========================================================
+                    SKILL IMAGE
+=========================================================*/
+
+.skills .container .bar .info img {
+  width: 60px;
+  height: 60px;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+/* Font Awesome Icon */
+
+.skills .container .bar .info i {
+  font-size: 4rem;
+
+  color: #090000;
+}
+
+/* Skill Name */
+
+.skills .container .bar .info span {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* Zoom Icon */
+
+.skills .container .bar:hover .info img {
+  transform: scale(1.12);
+}
+
+/*=========================================================
+                    LARGE LAPTOP
+=========================================================*/
+
+@media (max-width: 1200px) {
+  .skills {
+    padding: 5rem 5%;
+  }
+
+  .skills .container .row {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+/*=========================================================
+                        TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .skills {
+    padding: 5rem 4%;
+  }
+
+  .skills .container {
+    padding: 2rem;
+  }
+
+  .skills .container .row {
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1.4rem;
+  }
+
+  .skills .container .bar .info img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skills .container .bar .info span {
+    font-size: 1.5rem;
+  }
+}
+
+/*=========================================================
+                    SMALL TABLET
+=========================================================*/
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 3%;
+  }
+
+  .skills .container {
+    padding: 1.8rem;
+  }
+
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills .container .bar {
+    padding: 1.3rem 1rem;
+  }
+
+  .skills .container .bar .info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills .container .bar .info span {
+    font-size: 1.35rem;
+  }
+}
+
+/*=========================================================
+                        MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .skills {
+    padding: 4rem 1.5rem;
+  }
+
+  .skills .container {
+    padding: 1.5rem;
+  }
+
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.3rem;
+  }
+
+  .skills .container .bar {
+    border-radius: 14px;
+  }
+
+  .skills .container .bar .info img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .skills .container .bar .info span {
+    font-size: 1.2rem;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 360px) {
+  .skills .container .row {
+    grid-template-columns: 1fr;
+  }
+
+  .skills .container .bar .info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills .container .bar .info span {
+    font-size: 1.1rem;
+  }
+}
+
+/*=========================================================
+                  END OF SKILLS SECTION
+=========================================================*/
+
+/*=========================================================
+                    EDUCATION SECTION
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    Section Wrapper
+-----------------------------------------------------------
+*/
+
+.education {
+  min-height: 80vh;
+  padding: 6rem 8%;
+
+  background: #e5ecfb;
+}
+
+/*=========================================================
+                    SECTION SUBTITLE
+=========================================================*/
+
+.education .qoute {
+  margin-top: 0.8rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+
+  color: #444;
+}
+
+/*=========================================================
+                    CARD CONTAINER
+=========================================================*/
+
+.education .box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.5rem;
+
+  margin-top: 4rem;
+}
+
+/*=========================================================
+                    EDUCATION CARD
+=========================================================*/
+
+.education .box-container .box {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 1100px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+
+.education .box-container .box:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+/*=========================================================
+                    CARD IMAGE
+=========================================================*/
+
+.education .box-container .box .image {
+  flex: 0 0 320px;
+
+  overflow: hidden;
+}
+
+.education .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+/* Image Zoom */
+
+.education .box-container .box:hover img {
+  transform: scale(1.06);
+}
+
+/*=========================================================
+                    CARD CONTENT
+=========================================================*/
+
+.education .box-container .box .content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2.5rem;
+}
+
+/* College Name */
+
+.education .box-container .box .content h3 {
+  margin-bottom: 1rem;
+
+  font-size: 2.6rem;
+  font-weight: 700;
+
+  color: #012970;
+}
+
+/* Degree */
+
+.education .box-container .box .content p {
+  margin-bottom: 1rem;
+
+  font-size: 1.6rem;
+  line-height: 1.7;
+
+  color: #444;
+
+  text-transform: none;
+}
+
+/* Duration */
+
+.education h4 {
+  margin-top: 1rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: rgb(34, 109, 0);
+}
+
+/*=========================================================
+                    LARGE TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .education {
+    padding: 5rem 5%;
+  }
+
+  .education .box-container .box .image {
+    flex-basis: 260px;
+  }
+}
+
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media (max-width: 768px) {
+  .education {
+    padding: 4rem 3%;
+  }
+
+  .education .box-container .box {
+    flex-direction: column;
+  }
+
+  .education .box-container .box .image {
+    width: 100%;
+    height: 260px;
+
+    flex: none;
+  }
+
+  .education .box-container .box .content {
+    padding: 2rem;
+  }
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .education {
+    padding: 4rem 2rem;
+  }
+
+  .education .box-container {
+    gap: 2rem;
+  }
+
+  .education .box-container .box .image {
+    height: 220px;
+  }
+
+  .education .box-container .box .content h3 {
+    font-size: 2.2rem;
+  }
+
+  .education .box-container .box .content p {
+    font-size: 1.5rem;
+  }
+
+  .education h4 {
+    font-size: 1.8rem;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 360px) {
+  .education {
+    padding: 4rem 1.5rem;
+  }
+
+  .education .box-container .box .image {
+    height: 190px;
+  }
+
+  .education .box-container .box .content {
+    padding: 1.5rem;
+  }
+}
+
+/*=========================================================
+                END OF EDUCATION SECTION
+=========================================================*/
+
+/*=========================================================
+                    PROJECTS SECTION
+=========================================================*/
+
+/*---------------------------------------------------------
+                    Section Wrapper
+---------------------------------------------------------*/
+
+.work {
+  padding: 6rem 8%;
+
+  background: linear-gradient(to bottom, #e5ecfb, #000020);
+}
+
+.work h2 {
+  color: #090000;
+}
+
+.work .heading span {
+  color: rgb(255, 230, 0);
+}
+
+/*=========================================================
+                    PROJECT GRID
+=========================================================*/
+
+.work .box-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2.5rem;
+
+  margin-top: 4rem;
+}
+
+/*=========================================================
+                    PROJECT CARD
+=========================================================*/
+
+.work .box-container .box {
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Animation */
+
+.work .box-container .box:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.28);
+}
+
+/*=========================================================
+                    PROJECT IMAGE
+=========================================================*/
+
+.work .box-container .box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+/* Image Zoom */
+
+.work .box-container .box:hover img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+                    PROJECT OVERLAY
+=========================================================*/
+
+/*
+    Hidden by default.
+    Slides upward when card is hovered.
+*/
+
+.work .box-container .box .content {
+  position: absolute;
+
+  left: 0;
+  bottom: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  transition: all 0.4s ease;
+}
+
+/* Show Overlay */
+
+.work .box-container .box:hover .content {
+  bottom: 0;
+}
+
+/*=========================================================
+                    PROJECT HEADER
+=========================================================*/
+
+.work .box-container .box .content .tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.3rem 2rem;
+
+  background: #ffd900;
+}
+
+.work .box-container .box .content .tag h3 {
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #111;
+}
+
+/*=========================================================
+                    PROJECT DESCRIPTION
+=========================================================*/
+
+.work .desc {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+}
+
+.work .desc p {
+  font-size: 1.55rem;
+  line-height: 1.8;
+
+  color: #333;
+
+  text-transform: none;
+}
+
+/*=========================================================
+                    PROJECT BUTTONS
+=========================================================*/
+
+.work .desc .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.work .desc .btns .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 1.2rem 2.3rem;
+
+  border-radius: 10px;
+
+  background: #111;
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+  font-weight: 600;
+
+  transition: all 0.35s ease;
+}
+
+.work .desc .btns .btn:hover {
+  background: #310ae0;
+
+  transform: translateY(-3px);
+}
+
+/*=========================================================
+                    VIEW ALL BUTTON
+=========================================================*/
+
+.work .viewall {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5rem;
+}
+
+.work .viewall .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 1.5rem 3rem;
+
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  background: transparent;
+
+  transition: all 0.35s ease;
+}
+
+.work .viewall .btn:hover {
+  background: #ffffff;
+  color: #111;
+
+  transform: translateY(-3px);
+}
+
+.work .viewall .btn i {
+  transition: transform 0.35s ease;
+}
+
+.work .viewall .btn:hover i {
+  transform: translateX(6px);
+}
+
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .work {
+    padding: 5rem 5%;
+  }
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .work {
+    padding: 4rem 3%;
+  }
+
+  .work .box-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .work .box-container .box {
+    height: 300px;
+  }
+
+  .work .desc {
+    padding: 1.5rem;
+  }
+
+  .work .desc p {
+    font-size: 1.45rem;
+  }
+
+  .work .desc .btns {
+    flex-direction: column;
+  }
+
+  .work .desc .btns .btn {
+    width: 100%;
+  }
+}
+
+/*=========================================================
+                END OF PROJECT SECTION
+=========================================================*/
+
+/*=========================================================
+                    EXPERIENCE SECTION
+=========================================================*/
+
+/*---------------------------------------------------------
+                    Timeline Wrapper
+---------------------------------------------------------*/
+
+.experience {
+  padding: 6rem 8%;
+}
+
+.experience .timeline {
+  position: relative;
+
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+
+/*=========================================================
+                    TIMELINE LINE
+=========================================================*/
+
+.experience .timeline::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 6px;
+
+  margin-left: -3px;
+
+  background: #020133;
+
+  z-index: -1;
+}
+
+/*=========================================================
+                    TIMELINE ITEM
+=========================================================*/
+
+.experience .container {
+  position: relative;
+
+  width: 50%;
+
+  padding: 1rem 4rem;
+
+  background: inherit;
+}
+
+/*=========================================================
+                    TIMELINE ICON
+=========================================================*/
+
+.experience .container::after {
+  content: "\f0b1";
+
+  position: absolute;
+
+  top: 18px;
+  right: -17px;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  border: 4px solid #ff9f55;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #02094b;
+
+  font-size: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+
+  z-index: 10;
+}
+
+/*=========================================================
+                    LEFT & RIGHT
+=========================================================*/
+
+.experience .left {
+  left: 0;
+}
+
+.experience .right {
+  left: 50%;
+}
+
+.experience .right::after {
+  left: -16px;
+}
+
+/*=========================================================
+                    TIMELINE ARROWS
+=========================================================*/
+
+.experience .left::before {
+  content: "";
+
+  position: absolute;
+
+  top: 22px;
+  right: 30px;
+
+  border: solid #f68c09;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f68c09;
+}
+
+.experience .right::before {
+  content: "";
+
+  position: absolute;
+
+  top: 22px;
+  left: 30px;
+
+  border: solid #f68c09;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f68c09 transparent transparent;
+}
+
+/*=========================================================
+                    EXPERIENCE CARD
+=========================================================*/
+
+.experience .content {
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #f68c09;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover */
+
+.experience .content:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/*=========================================================
+                    CARD HEADER
+=========================================================*/
+
+.experience .content .tag {
+  padding: 1.8rem 2rem 1rem;
+}
+
+.experience .content .tag h2 {
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #111;
+}
+
+/*=========================================================
+                    CARD DESCRIPTION
+=========================================================*/
+
+.experience .content .desc {
+  padding: 0 2rem 2rem;
+}
+
+.experience .content .desc h3 {
+  margin-bottom: 0.8rem;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.experience .content .desc p {
+  font-size: 1.45rem;
+  line-height: 1.7;
+
+  color: #222;
+
+  text-transform: none;
+}
+
+/*=========================================================
+                    VIEW MORE BUTTON
+=========================================================*/
+
+.morebtn {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5rem;
+}
+
+.morebtn .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 1.5rem 3rem;
+
+  border-radius: 12px;
+
+  background: #2506ad;
+  color: #ffffff;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(48, 68, 247, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.morebtn .btn:hover {
+  background: #1a047e;
+
+  transform: translateY(-3px);
+}
+
+.morebtn .btn i {
+  transition: transform 0.35s ease;
+}
+
+.morebtn .btn:hover i {
+  transform: translateX(6px);
+}
+
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .experience {
+    padding: 5rem 5%;
+  }
+}
+
+/*=========================================================
+                    MOBILE TIMELINE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 3%;
+  }
+
+  .experience .timeline::after {
+    left: 30px;
+  }
+
+  .experience .container {
+    width: 100%;
+
+    padding-left: 8rem;
+    padding-right: 1rem;
+  }
+
+  .experience .container::before {
+    left: 60px;
+
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f68c09 transparent transparent;
+  }
+
+  .experience .left,
+  .experience .right {
+    left: 0;
+  }
+
+  .experience .left::after,
+  .experience .right::after {
+    left: 14px;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .experience .content .tag {
+    padding: 1.5rem;
+  }
+
+  .experience .content .desc {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .experience .content .tag h2 {
+    font-size: 1.8rem;
+  }
+
+  .experience .content .desc h3 {
+    font-size: 1.55rem;
+  }
+
+  .experience .content .desc p {
+    font-size: 1.35rem;
+  }
+
+  .morebtn .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*=========================================================
+                END OF EXPERIENCE SECTION
+=========================================================*/
+
+/*=========================================================
+                    CONTACT SECTION
+=========================================================*/
+
+/*---------------------------------------------------------
+                    Section Wrapper
+---------------------------------------------------------*/
+
+.contact {
+  min-height: 70vh;
+  padding: 6rem 8%;
+
+  background: #e5ecfb;
+}
+
+/*=========================================================
+                    CONTACT CARD
+=========================================================*/
+
+.contact .container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 4rem auto 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/*=========================================================
+                    CONTENT LAYOUT
+=========================================================*/
+
+.contact .container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 4rem;
+
+  padding: 3rem;
+}
+
+/*=========================================================
+                    CONTACT IMAGE
+=========================================================*/
+
+.contact .content .image-box {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .content .image-box img {
+  width: 100%;
+  max-width: 420px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+.contact .content .image-box img:hover {
+  transform: scale(1.03);
+}
+
+/*=========================================================
+                    CONTACT FORM
+=========================================================*/
+
+.contact .content form {
+  flex: 1;
+}
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+/*=========================================================
+                    INPUT FIELD
+=========================================================*/
+
+.form-group .field {
+  position: relative;
+
+  width: 100%;
+  height: 55px;
+}
+
+form i {
+  position: absolute;
+
+  top: 50%;
+  left: 18px;
+
+  transform: translateY(-50%);
+
+  font-size: 1.7rem;
+
+  color: #555;
+
+  pointer-events: none;
+
+  transition: color 0.3s ease;
+}
+
+/*=========================================================
+                    INPUTS
+=========================================================*/
+
+form .field input,
+form .message textarea {
+  width: 100%;
+  height: 100%;
+
+  padding-left: 50px;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  background: #edf2ff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+
+  transition: all 0.35s ease;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+  color: #666;
+}
+
+/*=========================================================
+                    FOCUS EFFECT
+=========================================================*/
+
+.field input:focus,
+.message textarea:focus {
+  border-color: rgb(115, 3, 167);
+
+  background: #ffffff;
+}
+
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color: rgb(115, 3, 167);
+}
+
+/*=========================================================
+                    MESSAGE BOX
+=========================================================*/
+
+form .message {
+  position: relative;
+}
+
+form .message textarea {
+  min-height: 150px;
+
+  padding: 18px 18px 18px 50px;
+
+  resize: vertical;
+}
+
+form .message i {
+  top: 24px;
+
+  transform: none;
+}
+
+form .message textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+/*=========================================================
+                    SUBMIT BUTTON
+=========================================================*/
+
+form .button-area {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 1rem;
+}
+
+.button-area button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 1.4rem 2.8rem;
+
+  border-radius: 10px;
+
+  background: #2506ad;
+  color: #ffffff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(48, 68, 247, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.button-area button:hover {
+  background: #1a047e;
+
+  transform: translateY(-3px);
+}
+
+.button-area button i {
+  position: static;
+
+  color: #ffffff;
+
+  transition: transform 0.35s ease;
+}
+
+.button-area button:hover i {
+  transform: translateX(6px);
+}
+
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .contact {
+    padding: 5rem 5%;
+  }
+
+  .contact .container .content {
+    gap: 2rem;
+  }
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 3%;
+  }
+
+  .contact .container .content {
+    flex-direction: column;
+  }
+
+  .contact .content .image-box {
+    display: none;
+  }
+
+  .contact .content form {
+    width: 100%;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .contact .container {
+    border-radius: 15px;
+  }
+
+  .contact .container .content {
+    padding: 2rem;
+  }
+
+  form .button-area {
+    justify-content: center;
+  }
+
+  .button-area button {
+    width: 100%;
+  }
+}
+
+/*=========================================================
+                END OF CONTACT SECTION
+=========================================================*/
+
+/*=========================================================
+                        FOOTER SECTION
+=========================================================*/
+
+/*---------------------------------------------------------
+                    Footer Wrapper
+---------------------------------------------------------*/
+
+.footer {
+  padding: 5rem 8% 2rem;
+
+  background: rgb(0, 1, 43);
+
+  color: #ffffff;
+}
+
+/*=========================================================
+                    FOOTER GRID
+=========================================================*/
+
+.footer .box-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 3rem;
+}
+
+/*=========================================================
+                    FOOTER COLUMN
+=========================================================*/
+
+.footer .box-container .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .box-container .box h3 {
+  margin-bottom: 1.8rem;
+
+  font-size: 2.3rem;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.footer .box-container .box p {
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
+  line-height: 1.8;
+
+  color: #d7d7d7;
+
+  text-transform: none;
+}
+
+.footer .box-container .box p i {
+  margin-right: 0.8rem;
+
+  color: #ffae00;
+}
+
+/*=========================================================
+                    FOOTER LINKS
+=========================================================*/
+
+.footer .box-container .box a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
+
+  color: #eeeeee;
+
+  transition: all 0.3s ease;
+}
+
+.footer .box-container .box a:hover {
+  color: #ffae00;
+
+  transform: translateX(6px);
+}
+
+/*=========================================================
+                    SOCIAL ICONS
+=========================================================*/
+
+.footer .box-container .box .share {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4.3rem;
+  height: 4.3rem;
+
+  margin: 0;
+
+  border-radius: 50%;
+
+  background: rgb(230, 230, 230);
+
+  color: #02094b;
+
+  font-size: 1.8rem;
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+
+.footer .box-container .box .share a:hover {
+  background: transparent;
+
+  color: #ffae00;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  transform: translateY(-5px) scale(1.08);
+}
+
+/*=========================================================
+                    FOOTER CREDIT
+=========================================================*/
+
+.footer .credit {
+  margin-top: 4rem;
+  padding-top: 2rem;
+
+  text-align: center;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer .credit a {
+  color: #ffae00;
+
+  font-weight: 700;
+}
+
+.footer .credit a:hover {
+  text-decoration: underline;
+}
+
+/*=========================================================
+                    HEART ANIMATION
+=========================================================*/
+
+.footer .fa {
+  margin: 0 0.3rem;
+
+  color: #e90606;
+
+  animation: heartbeat 0.8s infinite alternate;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 5rem 5% 2rem;
+  }
+}
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 3% 2rem;
+  }
+
+  .footer .box-container {
+    gap: 2.5rem;
+  }
+}
+
+/*=========================================================
+                    SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 576px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .box-container .box {
+    align-items: center;
+  }
+
+  .footer .box-container .box .share {
+    justify-content: center;
+  }
+}
+
+/*=========================================================
+                END OF FOOTER SECTION
+=========================================================*/
+
+/*=========================================================
+                COMMON RESPONSIVE SETTINGS
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    Large Desktop
+-----------------------------------------------------------
+*/
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 68%;
+  }
+
+  section {
+    max-width: 1600px;
+    margin: auto;
+  }
+}
+
+/*---------------------------------------------------------
+                    Laptop
+---------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+
+  section {
+    padding: 7rem 6%;
+  }
+}
+
+/*---------------------------------------------------------
+                    Tablet
+---------------------------------------------------------*/
+
+@media (max-width: 992px) {
+  html {
+    font-size: 58%;
+  }
+
+  section {
+    padding: 6rem 5%;
+  }
+}
+
+/*---------------------------------------------------------
+                    Mobile
+---------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  html {
+    font-size: 56%;
+  }
+
+  section {
+    padding: 5rem 4%;
+  }
+}
+
+/*---------------------------------------------------------
+                    Small Mobile
+---------------------------------------------------------*/
+
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 4rem 2rem;
+  }
+}
+
+/*---------------------------------------------------------
+                    Extra Small Devices
+---------------------------------------------------------*/
+
+@media (max-width: 360px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*=========================================================
+                    SCROLL TO TOP BUTTON
+=========================================================*/
+
+/*
+-----------------------------------------------------------
+    Floating Scroll Button
+-----------------------------------------------------------
+*/
+
+#scroll-top {
+  position: fixed;
+
+  right: 2rem;
+  bottom: -100px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #ffae00;
+  color: #0d002c;
+
+  font-size: 2rem;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  z-index: 999;
+
+  transition: all 0.35s ease;
+}
+
+/* Visible State */
+
+#scroll-top.active {
+  bottom: 30px;
+}
+
+/* Hover Effect */
+
+#scroll-top:hover {
+  background: #ffc72c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                ACCESSIBILITY IMPROVEMENTS
+=========================================================*/
+
+/*
+    Remove unwanted tap highlight
+    on mobile browsers.
+*/
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+    Better image rendering.
+*/
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    Improve button usability.
+*/
+
+button {
+  cursor: pointer;
+}
+
+/*=========================================================
+                PERFORMANCE OPTIMIZATION
+=========================================================*/
+
+/*
+    Enable GPU acceleration
+    for smoother animations.
+*/
+
+.home img,
+.bar,
+.box,
+.btn,
+.social-icons a {
+  will-change: transform;
+}
+
+/*
+    Prevent layout shifts.
+*/
+
+img {
+  height: auto;
+}
+
+/*=========================================================
+                FINAL TRANSITION SETTINGS
+=========================================================*/
+
+/*
+    Consistent animation speed
+    throughout the website.
+*/
+
+a,
+button,
+.btn,
+.bar,
+.box,
+img,
+i {
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/*=========================================================
+                    END OF CSS
+=========================================================*/

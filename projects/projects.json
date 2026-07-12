@@ -1,0 +1,65 @@
+[
+  {
+    "name": "CURA AI",
+    "desc": "CURA AI is an AI-powered healthcare assistant designed to help users identify potential diseases based on their symptoms and receive personalized health guidance.",
+    "image": "Curaai",
+    "category": "basicweb",
+    "links": {
+      "view": "https://www.linkedin.com/posts/pranjal-chansauriya-77590132a_sih2025-teamwork-ai-activity-7388625384302403584-GGCi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMSVwkB974HMRVQoLRXgUy_K0R3rlsuL4Q",
+      "code": "https://github.com/Pranjalchansa/CURA-AI"
+    }
+  },
+
+  {
+    "name": "JavaScript Projects Website",
+    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
+    "image": "jspro",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/Pranjalchansa/Javascript-project",
+      "code": "https://github.com/Pranjalchansa/Javascript-project"
+    }
+  },
+  {
+    "name": "Wheather App",
+    "desc": "Wheather app using html css and js. It shows the wheather of any city in the world. It uses openweathermap api to get the data.",
+    "image": "Wheather",
+    "category": "basicweb",
+    "links": {
+      "view": "https://weather-app-xi-wheat-79.vercel.app/",
+      "code": "https://github.com/Pranjalchansa/Weather-app"
+    }
+  },
+
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
+    "image": "portfolio1",
+    "category": "basicweb",
+    "links": {
+      "view": "https://portfolio-website-red-five-64.vercel.app/",
+      "code": "https://github.com/Pranjalchansa/Portfolio-Website"
+    }
+  },
+
+  {
+    "name": "Math-Gear",
+    "desc": "A simple math calculator web application built with HTML, CSS, and JavaScript.",
+    "image": "Mathgear",
+    "category": "basicweb",
+    "links": {
+      "view": "https://math-gear.vercel.app/",
+      "code": "https://github.com/Pranjalchansa/Math-Gear"
+    }
+  },
+  {
+    "name": "Maleria Detection",
+    "desc": "Malaria Detection Using Deep Learning is a CNN-based medical image classification project that detects malaria from microscopic blood smear images. ",
+    "image": "malaria",
+    "category": "ml",
+    "links": {
+      "view": "C:\\Users\\pranj\\OneDrive\\Desktop\\resumeportfolio\\Portfolio-Website\\assets\\images\\malaria.png",
+      "code": "https://github.com/Pranjalchansa/malaria-detection-deep-learning-aiml"
+    }
+  }
+]
