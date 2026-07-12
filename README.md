@@ -44,7 +44,7 @@ A modern, responsive personal portfolio website built using **HTML5, CSS3, JavaS
 ### 🖥️ Home Page
 
 <p align="center">
-  <img src="assets/images/projects/portfolio1.PNG" alt="Portfolio Preview" width="100%">
+  <img src="assets/images/projects/portfolio1.png" alt="Portfolio Preview" width="100%">
 </p>
 
 > **Replace the image above with a screenshot of your portfolio.**
