@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built using **HTML5, CSS3, JavaS
 
 ## 🚀 Live Demo
 
-🔗 **Visit Now:** [https://your-portfolio-link.com](https://portfolio-website-red-five-64.vercel.app/)
+🔗 **Visit Now:** [https://pranjalchansauriya-protfolio.vercel.app/](https://pranjalchansauriya-protfolio.vercel.app/)
 
 ---
 
@@ -95,9 +95,9 @@ Simply open **index.html** in your preferred browser.
 
 Feel free to connect with me through the following platforms:
 
-* 💼 **LinkedIn:** [https://linkedin.com/in/your-linkedin](https://www.linkedin.com/in/pranjal-chansauriya-77590132a/)
+* 💼 **LinkedIn:** [https://www.linkedin.com/in/pranjal-chansauriya-77590132a/](https://www.linkedin.com/in/pranjal-chansauriya-77590132a/)
 * 🐙 **GitHub:** https://github.com/Pranjalchansa
-* 📧 **Email:** [your-email@example.com](mailto:pranjalchansauriya@gmail.com)
+* 📧 **Email:** [pranjalchansauriya@gmail.com](mailto:pranjalchansauriya@gmail.com)
 
 ---
 
