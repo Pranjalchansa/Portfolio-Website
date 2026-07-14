@@ -22,7 +22,7 @@ document.addEventListener("visibilitychange", function () {
     $("#favicon").attr("href", "/assets/images/favicon.png");
   } else {
     document.title = "Come Back To Portfolio";
-    $("#favicon").attr("href", "/assets/images/favhand.png");
+    $("#favicon").attr("href", "/assets/images/favicon.png");
   }
 });
 
@@ -101,17 +101,36 @@ getProjects().then((data) => {
 // fetch projects end
 
 // Start of Tawk.to Live Chat
+// var Tawk_API = Tawk_API || {},
+//   Tawk_LoadStart = new Date();
+// (function () {
+//   var s1 = document.createElement("script"),
+//     s0 = document.getElementsByTagName("script")[0];
+//   s1.async = true;
+//   s1.src = "https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6";
+//   s1.charset = "UTF-8";
+//   s1.setAttribute("crossorigin", "*");
+//   s0.parentNode.insertBefore(s1, s0);
+// })();
+
+// <!--Start of Tawk.to Script-->
+
+// <!--Start of Tawk.to Script-->
+// <script type="text/javascript">
 var Tawk_API = Tawk_API || {},
   Tawk_LoadStart = new Date();
 (function () {
   var s1 = document.createElement("script"),
     s0 = document.getElementsByTagName("script")[0];
   s1.async = true;
-  s1.src = "https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6";
+  s1.src = "https://embed.tawk.to/6a55d7ae6076b81d4b66765e/1jtfl50ma";
   s1.charset = "UTF-8";
   s1.setAttribute("crossorigin", "*");
   s0.parentNode.insertBefore(s1, s0);
 })();
+// <!--End of Tawk.to Script-->
+
+// <!--End of Tawk.to Script-->
 // End of Tawk.to Live Chat
 
 // disable developer mode
