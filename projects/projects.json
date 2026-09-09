@@ -11,13 +11,13 @@
   },
 
   {
-    "name": "JavaScript Projects Website",
-    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
-    "image": "jspro",
+    "name": "Banking-Management-System",
+    "desc": "A simple banking management system built with HTML, CSS, and JavaScript.",
+    "image": "banking",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/Pranjalchansa/Javascript-project",
-      "code": "https://github.com/Pranjalchansa/Javascript-project"
+      "view": "https://banking-managemnet-system.onrender.com/",
+      "code": "https://github.com/Pranjalchansa/Banking-Management-System"
     }
   },
   {
