@@ -218,7 +218,7 @@ header .navbar ul li a:hover {
 .work .box-container .box img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .work .box-container .box .content {
   height: 100%;
@@ -283,7 +283,7 @@ header .navbar ul li a:hover {
     margin: 0rem;
   }
   .work .box-container .grid-item .box {
-    width: 95% !important;
+    width: 100% !important;
   }
 }
 
