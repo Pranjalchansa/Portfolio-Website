@@ -21,9 +21,9 @@
     }
   },
   {
-    "name": "Wheather App",
-    "desc": "Wheather app using html css and js. It shows the wheather of any city in the world. It uses openweathermap api to get the data.",
-    "image": "Wheather",
+    "name": "Weather App",
+    "desc": "Weather app using html css and js. It shows the weather of any city in the world. It uses openweathermap api to get the data.",
+    "image": "Weather",
     "category": "basicweb",
     "links": {
       "view": "https://weather-app-xi-wheat-79.vercel.app/",
@@ -38,7 +38,7 @@
     "category": "basicweb",
     "links": {
       "view": "https://portfolio-website-red-five-64.vercel.app/",
-      "code": "https://github.com/Pranjalchansa/Portfolio-Website"
+      "code": "https://github.com/Pranjalchansa/Portfolio-Websitee"
     }
   },
 
@@ -58,7 +58,7 @@
     "image": "malaria",
     "category": "ml",
     "links": {
-      "view": "C:\\Users\\pranj\\OneDrive\\Desktop\\resumeportfolio\\Portfolio-Website\\assets\\images\\malaria.png",
+      "view": "https://github.com/Pranjalchansa/malaria-detection-deep-learning-aiml",
       "code": "https://github.com/Pranjalchansa/malaria-detection-deep-learning-aiml"
     }
   }
